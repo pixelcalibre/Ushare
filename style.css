@@ -22,6 +22,7 @@ body,
 }
 body {
   flex-direction: row;
+  margin-top: 50px;
 }
 
 .upload-body {
@@ -206,7 +207,7 @@ p {
 }
 .ushare-logo {
   position: absolute;
-  height: 200px;
+  height: 150px;
   width: 400px;
   object-fit: contain;
   top: 0px;

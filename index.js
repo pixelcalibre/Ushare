@@ -74,12 +74,11 @@ const toUploadFile = () => {
 
     const xhr= new XMLHttpRequest();
     //we get the state of the event
-    xhr.onreadystatechange= () => {
-        if(xhr.readyState == XMLHttpRequest.DONE){
-            console.log(xhr.readyState);
-            onSuccessfulUpload(JSON.parse(xhr.responseText));
-        }
-    };
+    xhr.onreadystatechange = function () {
+    if (xhr.readyState == XMLHttpRequest.DONE) {
+      onSuccessfulUpload(xhr.responseText);
+    }
+  };
     xhr.upload.onprogress = updateProgress;
    xhr.upload.onerror = ()=> {
     resetBrowseValue();
