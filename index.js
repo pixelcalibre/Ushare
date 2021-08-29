@@ -1,7 +1,7 @@
 const dropBody= document.querySelector(".drop-body");
 const browseBtn=document.querySelector(".browse-btn");
 const browse = document.querySelector("#browse");
-const host = "ushare-share-files.herokuapp.com";
+const host = "hhtps://innshare.heroku.com/";
 //this si to upload the file URL
 const uploadURL= `${host}api/files`;
 const emailURL= `${host}api/files/send`;
@@ -94,7 +94,7 @@ const resetBrowseValue =()=>{
     browse.value="";
 }
 const updateProgress = (e) => {
-    const percentage =Math.round ((e.loaded)/(e.total));
+    let percentage =Math.round ((e.loaded)/(e.total));
     percentage*=100;
     console.log(percentage);
     progressBar.style.width = `${percentage}%`
