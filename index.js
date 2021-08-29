@@ -1,7 +1,7 @@
 const dropBody= document.querySelector(".drop-body");
 const browseBtn=document.querySelector(".browse-btn");
 const browse = document.querySelector("#browse");
-const host = "hhtps://innshare.heroku.com/";
+const host = "https://innshare.heroku.com/";
 //this si to upload the file URL
 const uploadURL= `${host}api/files`;
 const emailURL= `${host}api/files/send`;
@@ -77,7 +77,7 @@ const toUploadFile = () => {
     xhr.onreadystatechange= () => {
         if(xhr.readyState == XMLHttpRequest.DONE){
             console.log(xhr.readyState);
-            onSuccessfulUpload(JSON.parse(xhr.response));
+            onSuccessfulUpload(JSON.parse(xhr.responseText));
         }
     };
     xhr.upload.onprogress = updateProgress;
